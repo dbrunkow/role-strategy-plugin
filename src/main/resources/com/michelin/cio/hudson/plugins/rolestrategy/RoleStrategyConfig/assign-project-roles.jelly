@@ -124,6 +124,7 @@
          tableHighlighter = new TableHighlighter('projectRoles', 0, 1);
       });
 
+
       var deleteAssignedProjectRole = function(e) {
         e.onclick = function() {
           var tr = findAncestor(this,"TR");
