@@ -45,7 +45,7 @@
       </tr>
       <j:set var="nbAssignedProjectsRoles" value="${0}" />
       <j:forEach var="sid" items="${projectSIDs}">
-        <tr name="[${sid}]" class="permission-row">
+        <tr name="[${sid}]" class="permission-row" onclick="changeColor(this)">
           <local:userRow sid="${sid}" title="${sid}" global="${false}"  type="${it.strategy.PROJECT}"/>
         </tr>
         <j:set var="nbAssignedProjectsRoles" value="${nbAssignedProjectsRoles+1}" />
@@ -119,6 +119,10 @@
           Behaviour.applySubtree(findAncestor(table,"TABLE"));
         });
       })();
+
+      function changeColor(o){
+          o.style.backgroundColor=(o.style.backgroundColor=='red')?('transparent'):('red');
+      }
 
       Event.observe(window, 'load', function(event) {
          tableHighlighter = new TableHighlighter('projectRoles', 0, 1);

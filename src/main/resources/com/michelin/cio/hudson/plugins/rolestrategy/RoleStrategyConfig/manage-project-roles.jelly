@@ -65,7 +65,7 @@
       </tr>
       <j:set var="nbProjectRoles" value="${0}" />
       <j:forEach var="role" items="${it.strategy.getGrantedRoles(it.strategy.PROJECT)}">
-        <tr name="[${role.key.name}]" class="permission-row"  onclick="changeColor(this)">
+        <tr name="[${role.key.name}]" class="permission-row" onclick="changeColor(this)">
           <local:roleRow title="${role.key.name}" role="${role.key}" global="${false}" type="${it.strategy.PROJECT}" showDangerous="${hasDangerous}"/>
         </tr>
         <j:set var="nbProjectRoles" value="${nbProjectRoles+1}"/>
