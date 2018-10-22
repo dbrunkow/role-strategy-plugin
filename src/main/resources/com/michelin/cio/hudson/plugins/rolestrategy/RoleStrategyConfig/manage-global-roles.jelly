@@ -24,7 +24,7 @@
   -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
-          xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:local="local">
+          xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:localP2777797TST="local">
 
   <j:set var="id" value="${h.generateId()}"/>
   <!-- TODO: add warning to the UI for versions which have no administrative monitors? -->
